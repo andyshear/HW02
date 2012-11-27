@@ -45,6 +45,7 @@ private:
 	int frame_number_;
 };
 
+//Used brinkmwj's vector setup
 const Vec2f HW_02App::kUnitX = Vec2f(0.7071f,-0.7071f);
 const Vec2f HW_02App::kUnitY = Vec2f(0.7071f,0.7071f);
 
@@ -57,7 +58,7 @@ void HW_02App::setup()
 	mDrawImage = false;
 	f = new Font("Times New Roman", 20);
 
-
+	//Used brinkmwj's format to set up vector and mSquare_
 	Vec2f trans = (width/2.0f)*kUnitX + (height/2.0f)*kUnitY;
 	mSquare_ = new Square(3, mMouseLoc, trans, height/4.0f);
 	
@@ -92,7 +93,7 @@ void HW_02App::keyDown( KeyEvent event )
 		mDrawImage = ! mDrawImage;
 	}
 }
-
+//Referenced brinkmwj's update method to create mine, modified it to work with mouse input
 void HW_02App::update()
 {
 	Square* cur = mSquare_;
